@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phone number - by Noé Mercourt</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="validation"><span>I think you are a lyer !</span></div>
+      <div class="content" id="way_1">
+        <h1>Please enter your phone <span>number</span></h1>
+        <span id="number_1">0000000000</span>
+        <div class="content_row_1">
+          <button onclick="sub()"><</button>
+          <button onclick="add()">></button>
+        </div>
+        <div class="content_row_2">
+          <button onclick="reset()">Reset</button>
+          <button onclick="otherWay()">Use another way?</button>
+        </div>
+      </div>
+      
+      <div class="content" id="way_2">
+        <h1>Please enter your phone <span>number</span></h1>
+        <span id="number_2">0000000000</span>
+        <input
+          type="range"
+          step="1"
+          value="0"
+          min="0"
+          max="999999999"
+          onchange="updateNumber(this)"
+        ></input>
+        <div class="content_row_3">
+          <button onclick="otherWay()">Use another way?</button>
+        </div>
+      </div>
+
+      <div class="content" id="way_3">
+        <h1>Is your <span>number</span> : </h1>
+        <span id="number_3">0000000000</span>
+        <div class="content_row_1">
+          <button onclick="yes()">Yes</button>
+          <button onclick="no()">No</button>
+        </div>
+        <div class="content_row_3">
+          <button onclick="otherWay()">Use another way?</button>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
